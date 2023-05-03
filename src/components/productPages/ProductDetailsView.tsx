@@ -25,6 +25,10 @@ function ProductDetailsView(props:IProps){
    const [productOrderQuantity,setProductOrderQuantity] = useState<number>(1)
    const cartData = useAppSelector(store => store.cart.productsInCart)
 
+   useEffect(() =>{
+      setProductDetailsData(data)
+   },[data,index])
+
 
    // for the suspense hydration error 
    useEffect(() =>{

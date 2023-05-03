@@ -27,7 +27,7 @@ export default function Speakers(props:IPageProps){
                productsDataArray.length ?
                productsDataArray.map((value,index) => {
                   return(
-                     <ProductHighLight  productsHighlightData={value} key={value._id} index={index} />
+                     <ProductHighLight  data={value} key={value._id} index={index} />
                   )
                })
                :

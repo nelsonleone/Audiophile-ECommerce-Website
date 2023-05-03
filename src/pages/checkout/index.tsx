@@ -3,11 +3,11 @@ import CheckoutForm from "@/components/Checkout/CheckoutForm";
 import OrderGatewayPrompt from "@/components/Checkout/OrderGatewayPrompt";
 import { StyledCheckoutPage } from "@/components/styled/StyledCheckoutPage";
 import { useAppSelector } from "@/redux/features/CustomHooks";
-import { Alert } from "@mui/material";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react"
 import { FieldErrors } from "react-hook-form";
+import CustomSnackbar from "@/components/utils/CustomSnackbar";
 
 export interface ICheckoutFormData {
    name: string,
@@ -86,9 +86,7 @@ export default function Checkout({countriesNameListData}:{countriesNameListData:
          <OrderGatewayPrompt />
          {
             showAlert &&
-            <Alert severity="success">
-               You have successfully placed your order
-            </Alert>
+            <CustomSnackbar open={showAlert} snackbarMessage="Checkout Successful"/>
          }
       </>
    )

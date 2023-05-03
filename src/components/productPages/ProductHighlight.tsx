@@ -5,16 +5,22 @@ import Image from "next/image";
 import { urlFor } from "../../../lib/sanityClient";
 import { ContentPlaceholderLoader, ImagePlaceholderLoader } from "../Banners/ContentPlaceholderLoader";
 import { StyledProductHighlight } from "../styled/StyledProductHighlight"
+import { useState, useEffect } from "react"
 
 interface IProps {
-   productsHighlightData: ProductBase,
+   data: ProductBase,
    index: number,
 }
 
 export default function ProductHighLight(props:IProps){
 
    const { viewport } = useAppSelector(store => store.viewport)
-   const { productsHighlightData, index } = props;
+   const { data, index } = props;
+   const [productsHighlightData,setProductsHighlightData] = useState(data)
+
+   useEffect(() =>{
+      setProductsHighlightData(data)
+   },[data,index])
 
    return(
       <StyledProductHighlight index={index}>
