@@ -23,8 +23,6 @@
     "next": "^13.3.0",
     "next-image-loader": "^3.0.0",
     "next-sanity": "^4.1.7",
-    "@sanity/vision": "^3.9.1",
-    "sanity": "^3.0.0",
     "react": "^18.2.0",
     "react-content-loader": "^6.2.1",
     "react-dom": "^18.2.0",

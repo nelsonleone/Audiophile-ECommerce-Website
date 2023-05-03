@@ -1,3 +1,5 @@
+import { PrepareViewOptions } from "sanity"
+
 export default {
    name: "banner",
    title: "Banner",
@@ -56,10 +58,10 @@ export default {
          product: "product.name",
          productImage: "product.image.asset.url",
       },
-      prepare({ product, productImage } : {product:string,productImage:string}) {
+      prepare(value: Record<string, any>, viewOptions?: PrepareViewOptions | undefined) {
          return {
-           title: product,
-           media: productImage,
+           title: value?.product ?? '',
+           media: value?.productImage ?? '',
          }
       }       
    },
