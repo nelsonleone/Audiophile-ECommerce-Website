@@ -89,24 +89,31 @@ function ProductDetailsView(props:IProps){
                      src={urlFor(productDetailsData.productImage.mobile.asset._ref).url()}
                      width={800}
                      height={650}
+                     quality={90}
                      alt={productDetailsData.productImage.mobile.alt || `${productDetailsData.productName} Image`}
+                     placeholder="blur"
+                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42u3PMQ0AAAgDCKL9nQYoAAAAASUVORK5CYII="
                   />
                   :
                   viewport! < breakPoints.bpLarge ?
                      <Image
                         src={urlFor(productDetailsData.productImage.tablet.asset._ref).url()}
                         width={1000}
+                        quality={90}
                         height={500}
-
                         alt={productDetailsData.productImage.tablet.alt || `${productDetailsData.productName} Image`}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42u3PMQ0AAAgDCKL9nQYoAAAAASUVORK5CYII="
                      />
                      :
                      <Image
                         src={urlFor(productDetailsData.productImage.desktop.asset._ref).url()}
                         alt={productDetailsData.productImage.desktop.alt || `${productDetailsData.productName} Image`}
-                        width={1500}
-
-                        height={1000}
+                        width={2000}
+                        height={1500}
+                        quality={90}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42u3PMQ0AAAgDCKL9nQYoAAAAASUVORK5CYII="
                      />
                }
             </div>

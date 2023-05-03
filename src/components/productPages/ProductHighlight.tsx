@@ -32,7 +32,8 @@ export default function ProductHighLight(props:IProps){
                   <Image
                      src={urlFor(productsHighlightData.previewPageImage.mobile.asset._ref).url()}
                      width={800}
-                     height={650}
+                     height={750}
+                     quality={90}
                      alt={productsHighlightData.previewPageImage.mobile.alt || `${productsHighlightData.productName} Image`}
                      placeholder="blur"
                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42u3PMQ0AAAgDCKL9nQYoAAAAASUVORK5CYII="
@@ -42,7 +43,8 @@ export default function ProductHighLight(props:IProps){
                   <Image 
                      src={urlFor(productsHighlightData.previewPageImage.tablet.asset._ref).url()}
                      width={1000}
-                     height={500}
+                     height={1000}
+                     quality={90}
                      alt={productsHighlightData.previewPageImage.tablet.alt || `${productsHighlightData.productName} Image`}
                      placeholder="blur"
                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42u3PMQ0AAAgDCKL9nQYoAAAAASUVORK5CYII="
@@ -51,8 +53,9 @@ export default function ProductHighLight(props:IProps){
                   <Image 
                      src={urlFor(productsHighlightData.previewPageImage.desktop.asset._ref).url()}
                      alt={productsHighlightData.previewPageImage.desktop.alt || `${productsHighlightData.productName} Image`}
-                     width={1500}
-                     height={1000}
+                     width={2000}
+                     height={1500}
+                     quality={90}
                      placeholder="blur"
                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42u3PMQ0AAAgDCKL9nQYoAAAAASUVORK5CYII="
                   />
