@@ -7,6 +7,8 @@
 - NextJs
 - Sanity (as a backend CMS)
 - Material Ui
+- Redux Toolkit
+- Styled-Components
 - React Skeleton Content Placeholder Loader
 
 # Screenshots and Screen-Records
